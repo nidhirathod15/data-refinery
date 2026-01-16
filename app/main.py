@@ -17,7 +17,7 @@ os.makedirs(UPLOAD_DIR, exist_ok=True)
 
 # Setup Templates and Static files
 templates = Jinja2Templates(directory="app/templates")
-app.mount("/static", StaticFiles(directory="app/static"), name="static")
+# app.mount("/static", StaticFiles(directory="app/static"), name="static")
 
 @app.get("/", response_class=HTMLResponse)
 async def read_root(request: Request):
